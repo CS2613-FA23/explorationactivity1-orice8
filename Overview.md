@@ -76,27 +76,34 @@ Length = 14280 rows
   ```
 ### Astronomical and World Coordinates
   ```
-  test
+  from astropy.coordinates import get_icrs_coordinates
+
+  star_name = "Sirius"
+  coords = get_icrs_coordinates(star_name)
+  print(f"Right Ascension: {coords.ra.deg}, Declination: {coords.dec.deg}")
   ```
-### Machine Learning Modeling
   ```
-  test
+  Output:
+  Right Ascension: 101.287155333, Declination: -16.716115861
   ```
+### Machine Learning Modeling and Data Visualization
+   Reference this tutorial: [LINK](https://docs.astropy.org/en/stable/modeling/index.html)
+  
 ### Several Statistical Metrics
+Simplified tutorial of this: [LINK](https://docs.astropy.org/en/stable/stats/index.html)
   ```
-  test
+  from astropy.stats import sigma_clip
+  import numpy as np
+  
+  x = np.array([1, 0, 0, 1, 99, 0, 0, 1, 0])
+  print(x.mean())
+  y = sigma_clip(x)
+  print(y.mean())
   ```
-### File I/O
   ```
-  test
-  ```
-### Data Visualization, Filtering, and Convolution
-  ```
-  test
-  ```
-### Calculation Functions  
-  ```
-  test
+  Output:
+  11.333333333333334
+  0.375
   ```
 
 ## 4. When was it created?
